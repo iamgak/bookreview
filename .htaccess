@@ -2,7 +2,7 @@
 RewriteEngine On
 
 # Set Base Directory
-RewriteBase /my_blog/
+RewriteBase /bookreview/
 
 # Rewrite URLs to index.php
 RewriteCond %{REQUEST_FILENAME} !-f
