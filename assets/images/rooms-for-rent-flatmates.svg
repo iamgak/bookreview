@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <clipPath id="clip-RoomforRents_1x">
+      <rect width="24" height="24"/>
+    </clipPath>
+  </defs>
+  <g id="RoomforRents_1x" clip-path="url(#clip-RoomforRents_1x)">
+    <g id="Group_1872" data-name="Group 1872" transform="translate(2 1)">
+      <path id="Path_1084" data-name="Path 1084" d="M-4826.815,1549.822l-10.826,3.119v14.242l10.826,3.421Z" transform="translate(4843.991 -1549.198)" fill="#f7baba"/>
+      <g id="noun_Door_3214261" transform="translate(0 0)">
+        <path id="Path_1082" data-name="Path 1082" d="M.638,21.7H2.091V.638A.638.638,0,0,1,2.729,0H17.871a.638.638,0,0,1,.638.638V21.7h1.453a.638.638,0,1,1,0,1.276H.638a.638.638,0,0,1,0-1.276ZM7.853,4.933V18.044l9.379,3.388V1.545ZM14.188,21.7,7,19.091a.638.638,0,0,1-.421-.6v-14A.638.638,0,0,1,7,3.886l7.19-2.61H3.367V21.7Z" transform="translate(0 -0.5)" fill="#e00000" stroke="#e00001" stroke-width="0.9"/>
+        <path id="Path_1083" data-name="Path 1083" d="M-1287.572,426.21a.939.939,0,0,0-.927-.987.941.941,0,0,0-.958.98.913.913,0,0,0,.935.97A.934.934,0,0,0-1287.572,426.21Z" transform="translate(1299.332 -415.242)" fill="#e00000" stroke="#e00001" stroke-width="0.8"/>
+      </g>
+    </g>
+  </g>
+</svg>
