@@ -12,7 +12,7 @@ require($_SERVER['DOCUMENT_ROOT'] . '/functions.php');
 // --------------------------------------------
 
 // uncomment if mysql is required
-$link = new mysqli('p:localhost', 'root', '', 'my_blog');
+$link = new mysqli('p:localhost', 'root', '', 'bookreview');
 
 mysqli_set_charset($link, 'utf8mb4');
 
