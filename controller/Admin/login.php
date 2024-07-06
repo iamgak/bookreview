@@ -30,7 +30,7 @@ if (!empty($_POST)) {
         $email = $_POST['email'];
         $ip_addr =  $_SERVER['REMOTE_ADDR'];
         $password = $_POST['password'];
-        $login_query = "SELECT `register`.`id` FROM `register`  
+        $login_query = "SELECT `user_listing`.`id` FROM `user_listing`  
                         WHERE `email` = '$email' 
                         AND `password` = PASSWORD('$password') 
                         AND `active` = 1 AND `super` = 1";
@@ -38,7 +38,7 @@ if (!empty($_POST)) {
         if ($login->num_rows) {
             $ldata = sha1(str_shuffle(uniqid()));
             $uid = $login->fetch_assoc()['id'];
-            $update_query = "UPDATE `register` SET `last_login` = NOW(), `login_token` = '$ldata' WHERE `id` = '$uid' ";
+            $update_query = "UPDATE `user_listing` SET `last_login` = NOW(), `login_token` = '$ldata' WHERE `id` = '$uid' ";
             setcookie('ldata',$ldata,time()+3600*24,'/');
             $link->query($update_query);
             if ($link->affected_rows == 0) {

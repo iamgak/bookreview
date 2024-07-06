@@ -101,13 +101,13 @@ $offset = ($curr_page - 1) * $limit;
 
 $blog_listing = "
         SELECT
-            `register`.`username`,
+            `user_listing`.`username`,
             `user_reviews`.*,
             `genre`.`name` AS `genre`
         FROM
             `user_reviews`
         INNER JOIN `genre` ON `genre`.`id` = `user_reviews`.`genre`
-        INNER JOIN `register` ON `register`.`id` = `user_reviews`.`uid`
+        INNER JOIN `user_listing` ON `user_listing`.`id` = `user_reviews`.`uid`
             $search_query LIMIT $limit OFFSET $offset
 ";
 $blogs = $link->query($blog_listing);

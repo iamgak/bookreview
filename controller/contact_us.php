@@ -1,6 +1,5 @@
 <?php
 global $link;
-//print_r($_POST);die;
 if (!empty($_POST)) {
     foreach ($_POST as $key => $value) {
         switch ($key) {
@@ -22,8 +21,8 @@ if (!empty($_POST)) {
     }
 
     if (empty($error)) {
-        $insert_query = "INSERT INTO `contact_us`(`name`,`email`,`phone`,`query`)VALUES
-                            ('"._MS($_POST['name'])."','"._MS($_POST['email'])."','"._MS($_POST['phone'])."','"._MS($_POST['query'])."')";
+        $insert_query = "INSERT INTO `contact_us`(`name`,`email`,`phone`,`query`,`ip_addr`)VALUES
+                            ('"._MS($_POST['name'])."','"._MS($_POST['email'])."','"._MS($_POST['phone'])."','"._MS($_POST['query'])."','"._MS($_SERVER['REMOTE_ADDR'])."')";
             $link->query($insert_query);
             if(USER::$logged){
                 $link->query("INSERT INTO `activity_log_user` (`uid`, `ip_addr`,`activity`) VALUES ('".USER::$id."','"._MS($_SERVER['REMOTE_ADDR'])."','" . activity['CONTACT_US'] . "')");

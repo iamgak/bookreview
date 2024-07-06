@@ -6,7 +6,7 @@ $blog_listing = "SELECT `user_reviews`.`id`,`user_reviews`.`title`,
 `user_reviews`.`book_name` as book_name  
                     FROM `user_reviews`
                     INNER JOIN `genre` AS `category` ON `category`.`id` = `user_reviews`.`genre`
-                    INNER JOIN `register` AS `user` ON `user`.`id` = `user_reviews`.`uid`
+                    INNER JOIN `user_listing` AS `user` ON `user`.`id` = `user_reviews`.`uid`
                     ORDER BY `user_reviews`.`id` DESC LIMIT 4
                     ";
 $blogs = $link->query($blog_listing);

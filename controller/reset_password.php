@@ -39,7 +39,7 @@ if (!empty($_POST)) {
         die(json_encode(['error' => ['invalid' => error_message('too_many')]]));        
         }
         $user = $user->fetch_assoc()['uid'];
-        $link->query("UPDATE `register` SET `password` = password('"._MS($_POST['password'])."') WHERE `id` = '".$user."'");
+        $link->query("UPDATE `user_listing` SET `password` = password('"._MS($_POST['password'])."') WHERE `id` = '".$user."'");
         $reset_query = "UPDATE `user_passw_change` SET`active` = 0 WHERE `uid` = '$user' ";
         $link->query($reset_query);
         if($link->affected_rows ==0){
@@ -61,7 +61,7 @@ $user_detail = $validate_user->fetch_assoc();
 $activation_id = $user_detail['id'];
 $ip_addr =  $_SERVER['REMOTE_ADDR'];
 
-$link->query("UPDATE `register` SET `active` = 1 WHERE `id` = $activation_id");
+$link->query("UPDATE `user_listing` SET `active` = 1 WHERE `id` = $activation_id");
 $insert_user_detail = "INSERT INTO `user_profile`(`email`,`password`,`ip_addr`) VALUES('{$user_detail['email']}','{$user_detail['password']}','$ip_addr')";
 echo $insert_user_detail;
 $link->query($insert_user_detail);

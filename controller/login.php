@@ -31,12 +31,12 @@ if (!empty($_POST)) {
         if ($link->query("SELECT count(*) AS `count` FROM `activity_log_other` WHERE  timestampdiff(day,created_at,now()) = 0 AND `activity` = '".activity['INCORRECT_CREDENTIALS']."'AND `ip_addr`= '".$_SERVER['REMOTE_ADDR']."'")->fetch_assoc()['count'] > MAX_ATTEMPT) {
         die(json_encode(['error' => ['invalid' => error_message('too_many')]]));        
         }
-        $login_query = "SELECT `id` FROM `register` WHERE `email` = '" . _MS($_POST['email']) . "' AND `password` = PASSWORD('" . _MS($_POST['password']) . "') AND `active` = 1";
+        $login_query = "SELECT `id` FROM `user_listing` WHERE `email` = '" . _MS($_POST['email']) . "' AND `password` = PASSWORD('" . _MS($_POST['password']) . "') AND `active` = 1";
         $login = $link->query($login_query);
         if ($login->num_rows > 0) {
             $ldata = sha1(time() . $_SERVER['REMOTE_ADDR']);
             $uid = $login->fetch_assoc()['id'];
-            $update_query = "UPDATE `register` SET `last_login` = NOW(), `login_token` = '$ldata' WHERE `id` = '$uid' ";
+            $update_query = "UPDATE `user_listing` SET `last_login` = NOW(), `login_token` = '$ldata' WHERE `id` = '$uid' ";
             setcookie('ldata', $ldata, time() + 3600 * 24, '/');
             $link->query($update_query);
             if ($link->affected_rows == 0) {

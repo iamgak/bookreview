@@ -11,11 +11,11 @@ class USER
       global $link;
       //var_dump(USER::valid_token());   -->
       if (USER::valid_token()) {
-         //echo "SELECT `id` FROM `register` WHERE `login_token`='" . $_COOKIE['ldata']."'";
+         //echo "SELECT `id` FROM `user_listing` WHERE `login_token`='" . $_COOKIE['ldata']."'";
 
-         $login = $link->query("SELECT `register`.`id`,`privilege`.`uid` AS `super`,username 
-                                 FROM `register` 
-                                 LEFT JOIN `privilege` ON `register`.`id` = `privilege`.`uid` 
+         $login = $link->query("SELECT `user_listing`.`id`,`privilege`.`uid` AS `super`,username 
+                                 FROM `user_listing` 
+                                 LEFT JOIN `privilege` ON `user_listing`.`id` = `privilege`.`uid` 
                                  WHERE `login_token`='" . $_COOKIE['ldata']."'");
          if($login->num_rows > 0 ){
             $user=$login->fetch_assoc();
@@ -34,7 +34,7 @@ class USER
    public static function logout()
    {
       global $link;
-      $link->query("UPDATE `register` SET  `login_token` = null WHERE `login_token`='" . $_COOKIE['ldata']."'");
+      $link->query("UPDATE `user_listing` SET  `login_token` = null WHERE `login_token`='" . $_COOKIE['ldata']."'");
       setcookie("ldata",'',time()-3600,'/');
    }
    public static  function valid_token()

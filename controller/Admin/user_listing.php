@@ -12,7 +12,7 @@ if (!empty($POST)) {
     switch ($POST) {
         case $POST['active']    :
             $uid = _MS($POST['uid']);
-            $user = $link->query("SELECT `active` FROM `register` WHERE `id` = $uid");
+            $user = $link->query("SELECT `active` FROM `user_listing` WHERE `id` = $uid");
             if ($user->num_rows > 0) {
 
                 if ($user->fetch_assoc()['active']==1) {
@@ -23,7 +23,7 @@ if (!empty($POST)) {
                     $color ='green';
                 }
 
-                $update_query = "UPDATE `register` SET `active` = '$active' WHERE `id` = $uid";
+                $update_query = "UPDATE `user_listing` SET `active` = '$active' WHERE `id` = $uid";
                 $link->query($update_query);
                 die(json_encode(['status' => true,'color'=>$color]));
             } else {
@@ -38,7 +38,7 @@ if (!empty($POST)) {
     die(json_encode(['error' => $error]));
 }
 
-$user_listing = $link->query("SELECT * FROM `register`");
+$user_listing = $link->query("SELECT * FROM `user_listing`");
 
 require($_SERVER['DOCUMENT_ROOT'] . '/temp/Admin/head.php');
 require($_SERVER['DOCUMENT_ROOT'] . '/temp/Admin/user_listing.php');

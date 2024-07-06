@@ -1,0 +1,76 @@
+[07-Jun-2024 17:45:26 UTC] PHP Fatal error:  Uncaught TypeError: call_user_func_array(): Argument #1 ($callback) must be a valid callback, class my_controller does not have a method "css" in C:\Users\GUFRAN AHMAD KHAN\Desktop\bookreview\index.php:55
+Stack trace:
+#0 {main}
+  thrown in C:\Users\GUFRAN AHMAD KHAN\Desktop\bookreview\index.php on line 55
+[08-Jun-2024 10:07:25 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'bookreview.blog_list' doesn't exist in C:\Users\GUFRAN AHMAD KHAN\Desktop\bookreview\controller\listing.php:47
+Stack trace:
+#0 C:\Users\GUFRAN AHMAD KHAN\Desktop\bookreview\controller\listing.php(47): mysqli->query('SELECT `blog_li...')
+#1 C:\Users\GUFRAN AHMAD KHAN\Desktop\bookreview\mainController\my_controller.php(79): require('C:\\Users\\GUFRAN...')
+#2 C:\Users\GUFRAN AHMAD KHAN\Desktop\bookreview\index.php(55): my_controller->listing()
+#3 {main}
+  thrown in C:\Users\GUFRAN AHMAD KHAN\Desktop\bookreview\controller\listing.php on line 47
+[08-Jun-2024 10:07:28 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'bookreview.register' doesn't exist in C:\Users\GUFRAN AHMAD KHAN\Desktop\bookreview\controller\review_listing.php:83
+Stack trace:
+#0 C:\Users\GUFRAN AHMAD KHAN\Desktop\bookreview\controller\review_listing.php(83): mysqli->query('\r\n            S...')
+#1 C:\Users\GUFRAN AHMAD KHAN\Desktop\bookreview\mainController\my_controller.php(44): require('C:\\Users\\GUFRAN...')
+#2 C:\Users\GUFRAN AHMAD KHAN\Desktop\bookreview\index.php(55): my_controller->review_listing()
+#3 {main}
+  thrown in C:\Users\GUFRAN AHMAD KHAN\Desktop\bookreview\controller\review_listing.php on line 83
+[08-Jun-2024 10:14:09 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'bookreview.activity_log_other' doesn't exist in C:\Users\GUFRAN AHMAD KHAN\Desktop\bookreview\controller\contact_us.php:31
+Stack trace:
+#0 C:\Users\GUFRAN AHMAD KHAN\Desktop\bookreview\controller\contact_us.php(31): mysqli->query('INSERT INTO `ac...')
+#1 C:\Users\GUFRAN AHMAD KHAN\Desktop\bookreview\mainController\my_controller.php(24): require('C:\\Users\\GUFRAN...')
+#2 C:\Users\GUFRAN AHMAD KHAN\Desktop\bookreview\index.php(55): my_controller->contact_us()
+#3 {main}
+  thrown in C:\Users\GUFRAN AHMAD KHAN\Desktop\bookreview\controller\contact_us.php on line 31
+[08-Jun-2024 10:14:11 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'bookreview.activity_log_other' doesn't exist in C:\Users\GUFRAN AHMAD KHAN\Desktop\bookreview\controller\contact_us.php:31
+Stack trace:
+#0 C:\Users\GUFRAN AHMAD KHAN\Desktop\bookreview\controller\contact_us.php(31): mysqli->query('INSERT INTO `ac...')
+#1 C:\Users\GUFRAN AHMAD KHAN\Desktop\bookreview\mainController\my_controller.php(24): require('C:\\Users\\GUFRAN...')
+#2 C:\Users\GUFRAN AHMAD KHAN\Desktop\bookreview\index.php(55): my_controller->contact_us()
+#3 {main}
+  thrown in C:\Users\GUFRAN AHMAD KHAN\Desktop\bookreview\controller\contact_us.php on line 31
+[08-Jun-2024 10:14:16 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'bookreview.activity_log_other' doesn't exist in C:\Users\GUFRAN AHMAD KHAN\Desktop\bookreview\controller\contact_us.php:31
+Stack trace:
+#0 C:\Users\GUFRAN AHMAD KHAN\Desktop\bookreview\controller\contact_us.php(31): mysqli->query('INSERT INTO `ac...')
+#1 C:\Users\GUFRAN AHMAD KHAN\Desktop\bookreview\mainController\my_controller.php(24): require('C:\\Users\\GUFRAN...')
+#2 C:\Users\GUFRAN AHMAD KHAN\Desktop\bookreview\index.php(55): my_controller->contact_us()
+#3 {main}
+  thrown in C:\Users\GUFRAN AHMAD KHAN\Desktop\bookreview\controller\contact_us.php on line 31
+[08-Jun-2024 10:38:02 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'bookreview.blog_list' doesn't exist in C:\Users\GUFRAN AHMAD KHAN\Desktop\bookreview\controller\listing.php:47
+Stack trace:
+#0 C:\Users\GUFRAN AHMAD KHAN\Desktop\bookreview\controller\listing.php(47): mysqli->query('SELECT `blog_li...')
+#1 C:\Users\GUFRAN AHMAD KHAN\Desktop\bookreview\mainController\my_controller.php(79): require('C:\\Users\\GUFRAN...')
+#2 C:\Users\GUFRAN AHMAD KHAN\Desktop\bookreview\index.php(55): my_controller->listing()
+#3 {main}
+  thrown in C:\Users\GUFRAN AHMAD KHAN\Desktop\bookreview\controller\listing.php on line 47
+[28-Jun-2024 21:45:39 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'bookreview.user_listing' doesn't exist in C:\Users\GUFRAN AHMAD KHAN\Desktop\bookreview\controller\index.php:12
+Stack trace:
+#0 C:\Users\GUFRAN AHMAD KHAN\Desktop\bookreview\controller\index.php(12): mysqli->query('SELECT `user_re...')
+#1 C:\Users\GUFRAN AHMAD KHAN\Desktop\bookreview\mainController\my_controller.php(5): require('C:\\Users\\GUFRAN...')
+#2 C:\Users\GUFRAN AHMAD KHAN\Desktop\bookreview\index.php(55): my_controller->index()
+#3 {main}
+  thrown in C:\Users\GUFRAN AHMAD KHAN\Desktop\bookreview\controller\index.php on line 12
+[28-Jun-2024 21:48:29 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'bookreview.blog_list' doesn't exist in C:\Users\GUFRAN AHMAD KHAN\Desktop\bookreview\controller\listing.php:47
+Stack trace:
+#0 C:\Users\GUFRAN AHMAD KHAN\Desktop\bookreview\controller\listing.php(47): mysqli->query('SELECT `blog_li...')
+#1 C:\Users\GUFRAN AHMAD KHAN\Desktop\bookreview\mainController\my_controller.php(79): require('C:\\Users\\GUFRAN...')
+#2 C:\Users\GUFRAN AHMAD KHAN\Desktop\bookreview\index.php(55): my_controller->listing()
+#3 {main}
+  thrown in C:\Users\GUFRAN AHMAD KHAN\Desktop\bookreview\controller\listing.php on line 47
+[28-Jun-2024 21:51:33 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'bookreview.sub_category' doesn't exist in C:\Users\GUFRAN AHMAD KHAN\Desktop\bookreview\controller\listing.php:47
+Stack trace:
+#0 C:\Users\GUFRAN AHMAD KHAN\Desktop\bookreview\controller\listing.php(47): mysqli->query('SELECT `blog_li...')
+#1 C:\Users\GUFRAN AHMAD KHAN\Desktop\bookreview\mainController\my_controller.php(79): require('C:\\Users\\GUFRAN...')
+#2 C:\Users\GUFRAN AHMAD KHAN\Desktop\bookreview\index.php(55): my_controller->listing()
+#3 {main}
+  thrown in C:\Users\GUFRAN AHMAD KHAN\Desktop\bookreview\controller\listing.php on line 47
+[28-Jun-2024 21:55:51 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'user.username' in 'field list' in C:\Users\GUFRAN AHMAD KHAN\Desktop\bookreview\controller\listing.php:47
+Stack trace:
+#0 C:\Users\GUFRAN AHMAD KHAN\Desktop\bookreview\controller\listing.php(47): mysqli->query('SELECT `blog_li...')
+#1 C:\Users\GUFRAN AHMAD KHAN\Desktop\bookreview\mainController\my_controller.php(79): require('C:\\Users\\GUFRAN...')
+#2 C:\Users\GUFRAN AHMAD KHAN\Desktop\bookreview\index.php(55): my_controller->listing()
+#3 {main}
+  thrown in C:\Users\GUFRAN AHMAD KHAN\Desktop\bookreview\controller\listing.php on line 47
+[02-Jul-2024 13:21:49 UTC] PHP Warning:  Undefined array key "file" in C:\Users\GUFRAN AHMAD KHAN\Desktop\bookreview\temp\index.php on line 3
+[02-Jul-2024 13:21:49 UTC] PHP Deprecated:  pathinfo(): Passing null to parameter #1 ($path) of type string is deprecated in C:\Users\GUFRAN AHMAD KHAN\Desktop\bookreview\temp\index.php on line 10

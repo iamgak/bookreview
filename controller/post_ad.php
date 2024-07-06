@@ -27,8 +27,8 @@ if (!empty($_POST)) {
         die(json_encode(['error' => $error]));
     }
 }
-$categories = $link->query("SELECT * FROM `blog_category`");
-$sub_categories = $link->query("SELECT * FROM `blog_sub_category`");
+$categories = $link->query("SELECT * FROM `category`");
+$sub_categories = $link->query("SELECT * FROM `sub_category`");
 
 require($_SERVER['DOCUMENT_ROOT'] . '/temp/inc.head.php');
 require($_SERVER['DOCUMENT_ROOT'] . '/temp/post_ad.php');

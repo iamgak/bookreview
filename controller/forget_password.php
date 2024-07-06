@@ -14,7 +14,7 @@ if (!empty($_POST)) {
         die(json_encode(['error' => ['invalid' => error_message('too_many')]]));        
         }
 
-        $check_email_exist = $link->query("SELECT `id` FROM `register` WHERE `email` = '{$_POST['email']}'");
+        $check_email_exist = $link->query("SELECT `id` FROM `user_listing` WHERE `email` = '{$_POST['email']}'");
         if ($check_email_exist->num_rows > 0) {
             $uid = $check_email_exist->fetch_assoc()['id'];
             $activation_link = sha1($_SERVER['REMOTE_ADDR'] . time());

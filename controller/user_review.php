@@ -47,6 +47,7 @@ if (!empty($pid)) {
     $edit_review = $link->query($query)->fetch_assoc();
     //print_r($edit_review);die;
 }
+
 $genres = $link->query("SELECT * FROM `genre`");
 
 require($_SERVER['DOCUMENT_ROOT'] . '/temp/inc.head.php');

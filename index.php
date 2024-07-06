@@ -7,7 +7,7 @@ USER::onload();
 $routes = [
     //'~^/first/(\d+)/second/(\d+)/third/(\d+)(?:/page/(\d+))?~' => ['my_controller', 'home'],
     '~^/$~' => ['my_controller','index'],
-    '~^/assets/css/style\.css$~' => ['my_controller','css'],
+    //'~^/assets/css/style\.css$~' => ['my_controller','css'],
     '~^/api/$~' => ['my_controller','api'],
     '~^/post_ad/$~' => ['my_controller','post_ad'],
     '~^/register/$~' => ['my_controller','register'],

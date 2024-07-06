@@ -18,11 +18,10 @@ if (!empty($_POST)) {
             $error['repeat_password'] = error_message('password');
     }
     if (empty($error)) {
-        $update = "UPDATE `register` SET `password` = PASSWORD('" . _MS($_POST['password']) . "') WHERE `id` = '" . USER::$id . "'";
+        $update = "UPDATE `user_listing` SET `password` = PASSWORD('" . _MS($_POST['password']) . "') WHERE `id` = '" . USER::$id . "'";
         $link->query($update);
 
         $link->query("INSERT INTO `activity_log_user` (`uid`, `ip_addr`,`activity`) VALUES ('" . USER::$id . "','" . _MS($_SERVER['REMOTE_ADDR']) . "','" . activity['PASSWORD_CHANGE'] . "')");
-
         die(json_encode(['status' => true, 'location' => '']));
     } else {
         die(json_encode(['error' => $error]));

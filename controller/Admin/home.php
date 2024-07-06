@@ -12,7 +12,7 @@ $comment = $link->query("SELECT count(*) AS `comment`, monthname(`created_at`) A
 $contact_us = $link->query("SELECT count(*) AS `contact_us`, monthname(`created_at`) AS month FROM `activity_log_user` WHERE `activity` = '".activity['LOGGED_IN']."' GROUP by(month(`created_at`)); ");
 $new_user = $link->query("SELECT count(*) AS `new_user`, monthname(`created_at`) AS month FROM `activity_log_user` WHERE `activity` = '".activity['NEW_USER_REGISTERED']."' GROUP by(month(`created_at`)); ");
 $user = [];
-$user['users'] = $link->query("SELECT id, username FROM `register` ")->fetch_all(true);
+$user['users'] = $link->query("SELECT id, username FROM `user_listing` ")->fetch_all(true);
 //print_r($logged_out->fetch_all(true));
 //print_r($logged_in->fetch_all(true));die;
 foreach($logged_in as $log){
